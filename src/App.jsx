@@ -1,8 +1,9 @@
 import React from 'react';
+import Example from './Example.jsx';
 
 const App = ()=>{
     return(
-<h1>Hello user sava</h1>
+<Example/>
     )
 }
 

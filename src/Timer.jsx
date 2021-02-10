@@ -2,7 +2,10 @@ import React from 'react';
 
 const Timer = ()=>{
     return(
-<h1>Hello user sava</h1>
+<div className="timer">
+
+<div className="countdown"><span className="countdown-number" id="time">00:00:00</span> </div>
+</div>
     )
 }
 
