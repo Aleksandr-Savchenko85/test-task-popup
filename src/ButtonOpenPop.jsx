@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-const GoodButton =()=>{
+const ButtonOpenPop =()=>{
     
     return(
         <button className="fancy-button" onClick={()=>alert('Good job!')}>Click me!</button>
@@ -14,5 +14,5 @@ const GoodButton =()=>{
 
 
 
-export default GoodButton;
+export default ButtonOpenPop;
     
