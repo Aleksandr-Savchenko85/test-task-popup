@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ButtonSend = ()=>{
-    return(
-<h1>Hello user sava</h1>
+const ButtonSend = () => {
+    return (
+        <button className="send"><p className="send_text">Пополнить</p></button>
     )
 }
 
