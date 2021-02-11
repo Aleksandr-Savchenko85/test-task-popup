@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ButtonSend = () => {
+const ButtonSend = ({mon}) => {
     
     function getValue() {
         let select = document.getElementById("select");
          let value = select.options[select.selectedIndex].value;
-         alert(`Пополнение выполнено с помощью ${value}. Ваш счет пополнен на n $`);
+         alert(`Пополнение выполнено с помощью ${value} на сумму ${mon} $. Ваш счет с учетом акции пополнен на ${mon * 2} $`);
  }
      
     return (
