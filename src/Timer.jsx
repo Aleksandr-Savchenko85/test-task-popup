@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
-
 const Timer = ({ isOpen }) => {
-    const [timer, setTimer] = useState(0)
-    const [time, setTime] = useState('')
-
-    
+    const [timer, setTimer] = useState(0);
+    const [time, setTime] = useState('');
 
     useEffect(() => {
-        if (isOpen ) {
+        if (isOpen) {
             func()
-        }else{
+        } else {
             clearTimer()
         }
 
     }, [isOpen])
 
     useEffect(() => {
-        if (time == "00:00:00" ) {
+        if (time == "00:00:00") {
             clearTimer()
         }
 
@@ -26,7 +23,6 @@ const Timer = ({ isOpen }) => {
 
     function startTimer(duration, display) {
         let timer = duration, minutes, seconds;
-        
 
         setTimer(setInterval(function () {
             let hours = '0';
@@ -38,50 +34,39 @@ const Timer = ({ isOpen }) => {
             seconds = seconds < 10 ? "0" + seconds : seconds;
 
             display.textContent = hours + ":" + minutes + ":" + seconds;
-            setTime( hours + ":" + minutes + ":" + seconds)
+            setTime(hours + ":" + minutes + ":" + seconds)
 
             if (--timer < 0) {
                 timer = duration;
             }
         }, 1000))
 
-        if(parseInt(time.split(':')[1]) === 0){
+        if (parseInt(time.split(':')[1]) === 0) {
             clearTimer()
         }
     }
 
     let func = function () {
-        let sixteen = 60 * 0.05,
+        let sixteen = 60 * 16,
             display = document.querySelector('#time');
-            console.log(timer)
         startTimer(sixteen, display);
     };
 
-    let clearTimer = ()=>{
+    let clearTimer = () => {
         setTimer(
             clearInterval(timer)
         )
     }
 
-
-
-
-
-
-
     return (<>
         <div className="timer">
-            {/* <div className="countdown"><span className="countdown-number" id="time">{counter === 100 ? "Time over" : counter}</span> </div> */}
             <div className="countdown">
-            
-              <span className="countdown-number" id="time">00:00:00</span>  
-            
-                 </div>
+                <span className="countdown-number" id="time">00:00:00</span>
+            </div>
         </div>
         <h1 className="text_dep">Увеличьте свой депозит!</h1>
     </>
     )
 }
-
 
 export default Timer;

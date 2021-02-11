@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const ButtonClosePopup = ({hideForm}) => {
+const ButtonClosePopup = ({ hideForm }) => {
     return (
         <>
             <div className="trigger"><span className="text-trigger">100%</span></div>
@@ -9,6 +8,5 @@ const ButtonClosePopup = ({hideForm}) => {
         </>
     )
 }
-
 
 export default ButtonClosePopup;

@@ -21,17 +21,17 @@ const Popup = ({ isOpen, hideForm }) => {
         setMon(500)
     }
 
-     if (!isOpen) {
-       return null
-   }  
+    if (!isOpen) {
+        return null
+    }
 
     return (
-        
+
         <div className="pop_up">
             <ButtonClosePopup
                 hideForm={hideForm}
             />
-            <Timer isOpen={isOpen}/>
+            <Timer isOpen={isOpen} />
             <Select />
             <Boxes
                 mon={mon}
@@ -39,13 +39,10 @@ const Popup = ({ isOpen, hideForm }) => {
                 monay100={monay100}
                 monay500={monay500}
             />
-
             <ButtonSend
                 mon={mon}
-
             />
             <PoliticInfo />
-
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const PoliticInfo = () => {
     return (
         <>
@@ -9,6 +8,5 @@ const PoliticInfo = () => {
         </>
     )
 }
-
 
 export default PoliticInfo;
