@@ -1,14 +1,19 @@
 import React from 'react';
 
 const Select = () => {
+
     return (
-        <select name="select">
-            <option value="value1" defaultValue>Банковская карта</option>
-            <option value="value2">Биткоин</option>
-            <option value="value3">Выставить счет</option>
-        </select>
+        <>
+            <form>
+                <select id="select" name="select" className="select">
+                    <option value="Банковскаой карты" defaultValue>Банковская карта</option>
+                    <option value="Биткоина">Биткоин</option>
+                    <option value="Банковского счета">Выставить счет</option>
+                </select>
+            </form>
+
+        </>
     )
 }
-
 
 export default Select;

@@ -196,7 +196,23 @@ button:focus {
     box-shadow: 8px 8px 20px rgba(24, 28, 38, 0.5);
     border-radius: 5px;
     cursor: pointer;
+    
   }
+
+  .box:hover {
+  box-shadow: 0px 0px 0px 2px #f90914,
+  0px 0px 0px 7px #a7f9c9,
+  0px 0px 0px 9px #f90914,
+  0px 0px 5px 10px #ff4d00;;
+  }
+
+  .box:focus {
+    transform: scale(1.2, 1.2);
+    transition-duration: 5ms;
+    outline: none;
+   
+  }
+  
   .top_up{
     font-family: Gilroy;
     font-style: normal;
@@ -270,6 +286,7 @@ button:focus {
     background: #83F6B1;
     border-radius: 5555px;
     cursor: pointer;
+    outline: 0 !important;
   }
   .send_text{
     position: static;

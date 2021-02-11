@@ -2,10 +2,14 @@ import React from 'react';
 
 const ButtonSend = () => {
     
-
+    function getValue() {
+        let select = document.getElementById("select");
+         let value = select.options[select.selectedIndex].value;
+         alert(`Пополнение выполнено с помощью ${value}. Ваш счет пополнен на n $`);
+ }
      
     return (
-        <button className="send"><p className="send_text">Пополнить</p></button>
+        <input className="send" type="submit" value="Пополнить" onClick={getValue}></input>
     )
 }
 

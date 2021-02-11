@@ -8,11 +8,13 @@ import ButtonSend from './ButtonSend.jsx';
 import PoliticInfo from './PoliticInfo.jsx';
 
 
-const Popup = ({ isOpen, hideForm }) => {
+const Popup = ({ isOpen, hideForm}) => {
+    
 
-    if (!isOpen) {
+    /* if (!isOpen) {
         return null
-    }
+    } */
+      
     return (
         <div className="pop_up">
             <ButtonClosePopup 

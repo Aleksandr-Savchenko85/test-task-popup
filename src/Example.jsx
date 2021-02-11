@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Popup from './Popup.jsx';
 import ButtonOpenPop from './ButtonOpenPop.jsx';
 
-const Example = ({ isOpen, showForm, hideForm }) => {
+
+const Example = ({ isOpen, showForm, hideForm}) => {
+    
 
     return (
 
@@ -10,10 +12,13 @@ const Example = ({ isOpen, showForm, hideForm }) => {
             <>
                 <ButtonOpenPop
                     showForm={showForm}
+                   
                 />
                 <Popup
                     isOpen={isOpen}
                     hideForm={hideForm}
+                    
+                  
                 />
             </>
         </div>

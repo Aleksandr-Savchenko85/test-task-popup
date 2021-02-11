@@ -3,7 +3,7 @@ import React from 'react';
 const Timer = () => {
 
 
-    function startTimer(duration, display) {
+     function startTimer(duration, display) {
         let timer = duration, minutes, seconds;
         setInterval(function () {
             let hours = '0';
@@ -22,12 +22,11 @@ const Timer = () => {
         }, 1000);
     }
     
-    window.onload = function () {
+     window.onload = function () {
         let sixteen = 60 * 16,
             display = document.querySelector('#time');
         startTimer(sixteen, display);
     };
-
 
 
     return (<>
