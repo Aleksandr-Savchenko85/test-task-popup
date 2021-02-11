@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Popup from './Popup.jsx';
 import ButtonOpenPop from './ButtonOpenPop.jsx';
 
-const Example = () => {
+const Example = ({ isOpen, showForm, hideForm }) => {
+
+
+
     return (
 
         <div className="example_one">
             <>
-            <ButtonOpenPop/>
-            <Popup/>
+                <ButtonOpenPop
+                    showForm={showForm}
+
+                />
+                <Popup 
+                    isOpen={isOpen}
+                    hideForm={hideForm}
+                />
             </>
         </div>
     )

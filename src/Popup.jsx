@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonClosePopup from './ButtonClosePopup.jsx';
 import Timer from './Timer.jsx';
 import Select from './Select.jsx';
@@ -8,12 +8,16 @@ import ButtonSend from './ButtonSend.jsx';
 import PoliticInfo from './PoliticInfo.jsx';
 
 
+const Popup = ({ isOpen, hideForm }) => {
 
-
-const Popup = () => {
+    if (!isOpen) {
+        return null
+    }
     return (
         <div className="pop_up">
-            <ButtonClosePopup />
+            <ButtonClosePopup 
+            hideForm={hideForm}
+            />
             <Timer />
             <Select />
             <Boxes />
