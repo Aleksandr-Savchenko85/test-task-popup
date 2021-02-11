@@ -1,38 +1,82 @@
-import React from 'react';
-
-const Timer = () => {
+import React, { useEffect, useState } from 'react';
 
 
-     function startTimer(duration, display) {
+const Timer = ({ isOpen }) => {
+    const [timer, setTimer] = useState(0)
+    const [time, setTime] = useState('')
+
+    
+
+    useEffect(() => {
+        if (isOpen ) {
+            func()
+        }else{
+            clearTimer()
+        }
+
+    }, [isOpen])
+
+    useEffect(() => {
+        if (time == "00:00:00" ) {
+            clearTimer()
+        }
+
+    }, [time])
+
+
+    function startTimer(duration, display) {
         let timer = duration, minutes, seconds;
-        setInterval(function () {
+        
+
+        setTimer(setInterval(function () {
             let hours = '0';
             minutes = parseInt(timer / 60, 10)
             seconds = parseInt(timer % 60, 10);
-    
-             hours = hours < 10 ? "0" + hours : hours;
-             minutes = minutes < 10 ? "0" + minutes : minutes;
-             seconds = seconds < 10 ? "0" + seconds : seconds;
-    
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
             display.textContent = hours + ":" + minutes + ":" + seconds;
-    
+            setTime( hours + ":" + minutes + ":" + seconds)
+
             if (--timer < 0) {
                 timer = duration;
             }
-        }, 1000);
+        }, 1000))
+
+        if(parseInt(time.split(':')[1]) === 0){
+            clearTimer()
+        }
     }
-    
-     window.onload = function () {
-        let sixteen = 60 * 16,
+
+    let func = function () {
+        let sixteen = 60 * 0.05,
             display = document.querySelector('#time');
+            console.log(timer)
         startTimer(sixteen, display);
     };
+
+    let clearTimer = ()=>{
+        setTimer(
+            clearInterval(timer)
+        )
+    }
+
+
+
+
+
 
 
     return (<>
         <div className="timer">
-
-            <div className="countdown"><span className="countdown-number" id="time">00:00:00</span> </div>
+            {/* <div className="countdown"><span className="countdown-number" id="time">{counter === 100 ? "Time over" : counter}</span> </div> */}
+            <div className="countdown">
+            
+              <span className="countdown-number" id="time">00:00:00</span>  
+            
+                 </div>
         </div>
         <h1 className="text_dep">Увеличьте свой депозит!</h1>
     </>

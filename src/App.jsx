@@ -8,13 +8,14 @@ const App = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     
-
+    /* const togglePopUp = () => {
+        setIsOpen(!isOpen);
+      } */
 
     const showForm = () => {
         setIsOpen(true)
        
-       
-
+     
     };
     const hideForm = () => {
         setIsOpen(false)
@@ -27,6 +28,7 @@ const App = () => {
             isOpen={isOpen}
             showForm={showForm}
             hideForm={hideForm}
+            
            
             
 

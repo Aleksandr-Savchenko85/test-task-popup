@@ -26,11 +26,12 @@ const Popup = ({ isOpen, hideForm }) => {
    }  
 
     return (
+        
         <div className="pop_up">
             <ButtonClosePopup
                 hideForm={hideForm}
             />
-            <Timer />
+            <Timer isOpen={isOpen}/>
             <Select />
             <Boxes
                 mon={mon}
