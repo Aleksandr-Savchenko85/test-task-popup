@@ -27,7 +27,7 @@ const Popup = ({ isOpen, hideForm }) => {
 
     return (
 
-        <div className="pop_up">
+        <div className='pop_up'>
             <ButtonClosePopup
                 hideForm={hideForm}
             />

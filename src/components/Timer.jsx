@@ -14,7 +14,7 @@ const Timer = ({ isOpen }) => {
     }, [isOpen])
 
     useEffect(() => {
-        if (time == "00:00:00") {
+        if (time == '00:00:00') {
             clearTimer()
         }
 
@@ -29,12 +29,12 @@ const Timer = ({ isOpen }) => {
             minutes = parseInt(timer / 60, 10)
             seconds = parseInt(timer % 60, 10);
 
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
 
-            display.textContent = hours + ":" + minutes + ":" + seconds;
-            setTime(hours + ":" + minutes + ":" + seconds)
+            display.textContent = hours + ':' + minutes + ':' + seconds;
+            setTime(hours + ':' + minutes + ':' + seconds)
 
             if (--timer < 0) {
                 timer = duration;
@@ -59,12 +59,12 @@ const Timer = ({ isOpen }) => {
     }
 
     return (<>
-        <div className="timer">
-            <div className="countdown">
-                <span className="countdown-number" id="time">00:00:00</span>
+        <div className='timer'>
+            <div className='countdown'>
+                <span className='countdown-number' id='time'>00:00:00</span>
             </div>
         </div>
-        <h1 className="text_dep">Увеличьте свой депозит!</h1>
+        <h1 className='text_dep'>Увеличьте свой депозит!</h1>
     </>
     )
 }
