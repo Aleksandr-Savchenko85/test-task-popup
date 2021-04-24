@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Example from './Example.jsx';
+import Example from './components/Example';
 
 const App = () => {
 
